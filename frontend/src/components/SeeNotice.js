@@ -14,10 +14,10 @@ const SeeNotice = () => {
         if (currentRole === "Admin") {
             dispatch(getAllNotices(currentUser._id, "Notice"));
         }
-        else {
+        else if (currentUser?.school?._id) {
             dispatch(getAllNotices(currentUser.school._id, "Notice"));
         }
-    }, [dispatch]);
+    }, [dispatch, currentRole, currentUser._id, currentUser?.school?._id]);
 
     if (error) {
         console.log(error);
@@ -39,6 +39,7 @@ const SeeNotice = () => {
             id: notice._id,
         };
     });
+
     return (
         <div style={{ marginTop: '50px', marginRight: '20px' }}>
             {loading ? (
@@ -56,7 +57,6 @@ const SeeNotice = () => {
                 </>
             )}
         </div>
-
     )
 }
 

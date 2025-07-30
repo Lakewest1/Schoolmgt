@@ -30,7 +30,7 @@ const ChooseSubject = ({ situation }) => {
             setTeacherID(teacherID);
             dispatch(getTeacherFreeClassSubjects(classID));
         }
-    }, [situation]);
+    }, [situation, dispatch, params]); // Added missing dependencies here
 
     if (loading) {
         return <div>Loading...</div>;

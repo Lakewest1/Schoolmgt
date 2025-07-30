@@ -42,13 +42,13 @@ const StudentExamMarks = ({ situation }) => {
             dispatch(getUserDetails(studentID, "Student"));
             setChosenSubName(subjectID);
         }
-    }, [situation]);
+    }, [dispatch, params, situation]);  // Added missing dependencies
 
     useEffect(() => {
         if (userDetails && userDetails.sclassName && situation === "Student") {
             dispatch(getSubjectList(userDetails.sclassName._id, "ClassSubjects"));
         }
-    }, [dispatch, userDetails]);
+    }, [dispatch, userDetails, situation]);  // Added missing dependency
 
     const changeHandler = (event) => {
         const selectedSubject = subjectsList.find(

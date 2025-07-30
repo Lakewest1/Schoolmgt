@@ -2,7 +2,6 @@ import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from "react-router-dom";
 import { getAllStudents } from '../../../redux/studentRelated/studentHandle';
-import { deleteUser } from '../../../redux/userRelated/userHandle';
 import {
     Paper, Box, IconButton
 } from '@mui/material';
@@ -15,7 +14,6 @@ import SpeedDialTemplate from '../../../components/SpeedDialTemplate';
 import * as React from 'react';
 import Button from '@mui/material/Button';
 import ButtonGroup from '@mui/material/ButtonGroup';
-// import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import { KeyboardArrowUp, KeyboardArrowDown } from '@mui/icons-material';
 import ClickAwayListener from '@mui/material/ClickAwayListener';
 import Grow from '@mui/material/Grow';
@@ -25,7 +23,6 @@ import MenuList from '@mui/material/MenuList';
 import Popup from '../../../components/Popup';
 
 const ShowStudents = () => {
-
     const navigate = useNavigate()
     const dispatch = useDispatch();
     const { studentsList, loading, error, response } = useSelector((state) => state.student);
@@ -47,11 +44,6 @@ const ShowStudents = () => {
         console.log(address);
         setMessage("Sorry the delete function has been disabled for now.")
         setShowPopup(true)
-
-        // dispatch(deleteUser(deleteID, address))
-        //     .then(() => {
-        //         dispatch(getAllStudents(currentUser._id));
-        //     })
     }
 
     const studentColumns = [

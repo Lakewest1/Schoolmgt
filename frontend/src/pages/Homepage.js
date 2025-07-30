@@ -8,12 +8,21 @@ import { LightPurpleButton } from '../components/buttonStyles';
 const Homepage = () => {
     return (
         <StyledContainer>
-            <Grid container spacing={0}>
-                <Grid item xs={12} md={6}>
-                    <img src={Students} alt="students" style={{ width: '100%' }} />
+            <Grid container spacing={0} sx={{ height: '100%' }}>
+                <Grid item xs={12} md={6} sx={{ display: 'flex', alignItems: 'center' }}>
+                    <img 
+                        src={Students} 
+                        alt="students" 
+                        style={{ 
+                            width: '100%', 
+                            height: 'auto',
+                            maxHeight: '100vh',
+                            objectFit: 'cover'
+                        }} 
+                    />
                 </Grid>
                 <Grid item xs={12} md={6}>
-                    <StyledPaper elevation={3}>
+                    <StyledPaper>
                         <StyledTitle>
                             Welcome to <br/> <strong>Cool Made</strong>
                             <br />
@@ -34,7 +43,15 @@ const Homepage = () => {
                             </StyledLink>
                             <StyledLink to="/chooseasguest">
                                 <Button variant="outlined" fullWidth
-                                    sx={{ mt: 2, mb: 3, color: "#7f56da", borderColor: "#7f56da" }}
+                                    sx={{ 
+                                        mt: 2, 
+                                        mb: 3, 
+                                        color: "#7f56da", 
+                                        borderColor: "#7f56da",
+                                        '&:hover': {
+                                            borderColor: "#7f56da"
+                                        }
+                                    }}
                                 >
                                     Login as Guest
                                 </Button>
@@ -60,41 +77,85 @@ const StyledContainer = styled(Container)`
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color:yellow;
+  background-color: yellow;
+  padding: 0;
+  max-width: 100% !important;
+
+  @media (max-width: 900px) {
+    height: auto;
+    min-height: 100vh;
+  }
 `;
 
 const StyledPaper = styled.div`
   padding: 24px;
-  height: 100vh;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  @media (max-width: 900px) {
+    padding: 16px;
+    height: auto;
+  }
 `;
 
 const StyledBox = styled(Box)`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content:center;
+  justify-content: center;
   gap: 16px;
   padding: 24px;
+
+  @media (max-width: 600px) {
+    padding: 16px;
+  }
 `;
 
 const StyledTitle = styled.h1`
   font-size: 3rem;
   color: #252525;
-  /* font-family: "Manrope"; */
   font-weight: bold;
   padding-top: 0;
   letter-spacing: normal;
   line-height: normal;
+  margin-bottom: 24px;
+
+  @media (max-width: 1200px) {
+    font-size: 2.5rem;
+  }
+
+  @media (max-width: 900px) {
+    font-size: 2rem;
+    margin-bottom: 16px;
+  }
+
+  @media (max-width: 600px) {
+    font-size: 1.8rem;
+  }
 `;
 
 const StyledText = styled.p`
-  /* color: #550080; */
   margin-top: 30px;
-  margin-bottom: 30px; 
+  margin-bottom: 30px;
   letter-spacing: normal;
   line-height: normal;
+  font-size: 1.1rem;
+
+  @media (max-width: 900px) {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 1rem;
+  }
 `;
 
 const StyledLink = styled(Link)`
   text-decoration: none;
+  width: 100%;
+  max-width: 400px;
+
+  @media (max-width: 600px) {
+    max-width: 100%;
+  }
 `;
