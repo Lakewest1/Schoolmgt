@@ -33,10 +33,10 @@ const TeacherDetails = () => {
             ) : (
                 <Container>
                     <Typography variant="h4" align="center" gutterBottom>
-                        Teacher Details
+                        Lecturer Details
                     </Typography>
                     <Typography variant="h6" gutterBottom>
-                        Teacher Name: {teacherDetails?.name}
+                        Lecturer Name: {teacherDetails?.name}
                     </Typography>
                     <Typography variant="h6" gutterBottom>
                         Class Name: {teacherDetails?.teachSclass?.sclassName}
@@ -44,10 +44,10 @@ const TeacherDetails = () => {
                     {isSubjectNamePresent ? (
                         <>
                             <Typography variant="h6" gutterBottom>
-                                Subject Name: {teacherDetails?.teachSubject?.subName}
+                                Course Name: {teacherDetails?.teachSubject?.subName}
                             </Typography>
                             <Typography variant="h6" gutterBottom>
-                                Subject Sessions: {teacherDetails?.teachSubject?.sessions}
+                                Course Sessions: {teacherDetails?.teachSubject?.sessions}
                             </Typography>
                         </>
                     ) : (

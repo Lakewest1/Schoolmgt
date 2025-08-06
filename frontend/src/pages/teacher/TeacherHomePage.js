@@ -35,7 +35,7 @@ const TeacherHomePage = () => {
                         <StyledPaper>
                             <img src={Students} alt="Students" />
                             <Title>
-                                Class Students
+                                Students
                             </Title>
                             <Data start={0} end={numberOfStudents} duration={2.5} />
                         </StyledPaper>

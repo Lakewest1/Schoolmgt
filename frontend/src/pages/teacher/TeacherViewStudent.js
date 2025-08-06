@@ -89,7 +89,7 @@ const TeacherViewStudent = () => {
                                         <Table key={index}>
                                             <TableHead>
                                                 <StyledTableRow>
-                                                    <StyledTableCell>Subject</StyledTableCell>
+                                                    <StyledTableCell>Course</StyledTableCell>
                                                     <StyledTableCell>Present</StyledTableCell>
                                                     <StyledTableCell>Total Sessions</StyledTableCell>
                                                     <StyledTableCell>Attendance Percentage</StyledTableCell>

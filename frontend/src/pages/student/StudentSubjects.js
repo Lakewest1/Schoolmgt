@@ -47,7 +47,7 @@ const StudentSubjects = () => {
         return (
             <>
                 <Typography variant="h4" align="center" gutterBottom>
-                    Subject Marks
+                    Course Marks
                 </Typography>
                 <Table>
                     <TableHead>
@@ -88,7 +88,7 @@ const StudentSubjects = () => {
                     You are currently in Class {sclassDetails && sclassDetails.sclassName}
                 </Typography>
                 <Typography variant="h6" gutterBottom>
-                    And these are the subjects:
+                    And these are the Courses:
                 </Typography>
                 {subjectsList &&
                     subjectsList.map((subject, index) => (

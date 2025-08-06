@@ -52,8 +52,8 @@ const ClassDetails = () => {
     }
 
     const subjectColumns = [
-        { id: 'name', label: 'Subject Name', minWidth: 170 },
-        { id: 'code', label: 'Subject Code', minWidth: 100 },
+        { id: 'name', label: 'Course Name', minWidth: 170 },
+        { id: 'code', label: 'Course Code', minWidth: 100 },
     ]
 
     const subjectRows = subjectsList && subjectsList.length > 0 && subjectsList.map((subject) => {
@@ -198,7 +198,7 @@ const ClassDetails = () => {
     const ClassTeachersSection = () => {
         return (
             <>
-                Teachers
+                Lecturer
             </>
         )
     }
@@ -216,7 +216,7 @@ const ClassDetails = () => {
                     This is Class {sclassDetails && sclassDetails.sclassName}
                 </Typography>
                 <Typography variant="h6" gutterBottom>
-                    Number of Subjects: {numberOfSubjects}
+                    Number of Courses: {numberOfSubjects}
                 </Typography>
                 <Typography variant="h6" gutterBottom>
                     Number of Students: {numberOfStudents}
@@ -234,7 +234,7 @@ const ClassDetails = () => {
                         variant="contained"
                         onClick={() => navigate("/Admin/addsubject/" + classID)}
                     >
-                        Add Subjects
+                        Add Courses
                     </GreenButton>
                 }
             </>

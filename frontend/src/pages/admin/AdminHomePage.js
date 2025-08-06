@@ -58,7 +58,7 @@ const AdminHomePage = () => {
                         <StyledPaper>
                             <img src={Teachers} alt="Teachers" />
                             <Title>
-                                Total Teachers
+                                Total Lecturers
                             </Title>
                             <Data start={0} end={numberOfTeachers} duration={2.5} />
                         </StyledPaper>

@@ -42,7 +42,7 @@ const ShowSubjects = () => {
     }
 
     const subjectColumns = [
-        { id: 'subName', label: 'Sub Name', minWidth: 170 },
+        { id: 'subName', label: 'Course Name', minWidth: 170 },
         { id: 'sessions', label: 'Sessions', minWidth: 170 },
         { id: 'sclassName', label: 'Class', minWidth: 170 },
     ]
@@ -92,7 +92,7 @@ const ShowSubjects = () => {
                         <Box sx={{ display: 'flex', justifyContent: 'flex-end', marginTop: '16px' }}>
                             <GreenButton variant="contained"
                                 onClick={() => navigate("/Admin/subjects/chooseclass")}>
-                                Add Subjects
+                                Add Courses
                             </GreenButton>
                         </Box>
                         :

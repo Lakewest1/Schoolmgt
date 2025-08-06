@@ -147,31 +147,31 @@ const ViewSubject = () => {
     return (
       <>
         <Typography variant="h4" align="center" gutterBottom>
-          Subject Details
+          Course Details
         </Typography>
         <Typography variant="h6" gutterBottom>
-          Subject Name : {subjectDetails && subjectDetails.subName}
+          Course Name : {subjectDetails && subjectDetails.subName}
         </Typography>
         <Typography variant="h6" gutterBottom>
-          Subject Code : {subjectDetails && subjectDetails.subCode}
+          Course Code : {subjectDetails && subjectDetails.subCode}
         </Typography>
         <Typography variant="h6" gutterBottom>
-          Subject Sessions : {subjectDetails && subjectDetails.sessions}
+          Course Sessions : {subjectDetails && subjectDetails.sessions}
         </Typography>
         <Typography variant="h6" gutterBottom>
           Number of Students: {numberOfStudents}
         </Typography>
         <Typography variant="h6" gutterBottom>
-          Class Name : {subjectDetails && subjectDetails.sclassName && subjectDetails.sclassName.sclassName}
+          Class : {subjectDetails && subjectDetails.sclassName && subjectDetails.sclassName.sclassName}
         </Typography>
         {subjectDetails && subjectDetails.teacher ?
           <Typography variant="h6" gutterBottom>
-            Teacher Name : {subjectDetails.teacher.name}
+            Lecturer Name : {subjectDetails.teacher.name}
           </Typography>
           :
           <GreenButton variant="contained"
             onClick={() => navigate("/Admin/teachers/addteacher/" + subjectDetails._id)}>
-            Add Subject Teacher
+            Add Class Lecturer
           </GreenButton>
         }
       </>
